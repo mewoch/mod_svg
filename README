@@ -10,6 +10,9 @@ It does do a few checks on the way through.
 4. It will check if the fill, stroke, and stroke-with parameters have 
    *all* been modified already and fail if they have.
 
+Currently it writes output to filename_mod.svg because I think it's still 
+in test phase. You can uncomment a line if you feel confident.
+
 It's a bit rough still so suggestions and improvements are welcome.
 
 Particuarly the fall out from point four needs work. The current

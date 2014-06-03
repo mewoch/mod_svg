@@ -1,0 +1,22 @@
+This script takes in svg files and modifies then to allow things like 
+QGIS to alter the svg's colour without changing the file, as described
+here : http://www.sourcepole.com/svg-symbols-in-qgis-with-modifiable-colors
+
+It does do a few checks on the way through.
+1. It expects a file as an option
+2. It expects an .svg or .SVG extension
+3. It will check for the fill, stroke, and stroke-width parameters and 
+   fail if they're not there.
+4. It will check if the fill, stroke, and stroke-with parameters have 
+   *all* been modified already and fail if they have.
+
+It's a bit rough still so suggestions and improvements are welcome.
+
+Particuarly the fall out from point four needs work. The current
+situation is that the script will just add the changes again, leading
+to duplication. However, this doesn't seem to cause problems.
+As each svg element could (or not) be modified, the script
+would need to check each fill, stroke and stroke-with for each element
+- and I've not thought that though, without creating lots of temp-stuff.
+
+-ramon.
